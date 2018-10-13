@@ -13,7 +13,7 @@ source:
   {{ hash_type }}: {{ hash_val }}
 
 build:
-  number: 0
+  number: 1000
   script: NO_KERNEL_INSTALL=1 python setup.py install --single-version-externally-managed --record=record.txt
   skip: true  # [not linux]
   skip: true  # [py2k]
