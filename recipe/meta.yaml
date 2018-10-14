@@ -1,7 +1,7 @@
-{%set name = "SAS_kernel" %}
-{%set version = "2.1.7" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "730608f28beda4ed4d46f1ce9d3ef5269211e838d0cc5922a56427fdeaa935fc" %}
+{% set name = "SAS_kernel" %}
+{% set version = "2.1.7" %}
+{% set hash_type = "sha256" %}
+{% set hash_val = "730608f28beda4ed4d46f1ce9d3ef5269211e838d0cc5922a56427fdeaa935fc" %}
 
 package:
   name: {{ name | lower }}
@@ -13,7 +13,7 @@ source:
   {{ hash_type }}: {{ hash_val }}
 
 build:
-  number: 0
+  number: 1000
   script: NO_KERNEL_INSTALL=1 python setup.py install --single-version-externally-managed --record=record.txt
   skip: true  # [not linux]
   skip: true  # [py2k]
