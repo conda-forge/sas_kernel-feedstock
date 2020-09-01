@@ -1,4 +1,4 @@
-{% set version = "2.3.0" %}
+{% set version = "2.3.1" %}
 
 package:
   name: sas_kernel
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/sas_kernel/SAS_kernel-{{ version }}.tar.gz
-  sha256: be69f6f823df5223969552eadb560bebdeae469ea43d07d4da706b1cac6cfac5
+  sha256: 8a655923c9785c02290cab387a2042f53806aa09f5ccdee0606830a7dbaa1378
 
 build:
   number: 0
