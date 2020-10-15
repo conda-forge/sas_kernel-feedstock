@@ -9,7 +9,7 @@ source:
   sha256: 8a655923c9785c02290cab387a2042f53806aa09f5ccdee0606830a7dbaa1378
 
 build:
-  number: 0
+  number: 1
   script: NO_KERNEL_INSTALL=1 {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [not linux]
   skip: true  # [py2k]
