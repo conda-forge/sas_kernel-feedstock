@@ -1,4 +1,4 @@
-{% set version = "2.3.1" %}
+{% set version = "2.4.2" %}
 
 package:
   name: sas_kernel
@@ -6,16 +6,16 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/sas_kernel/SAS_kernel-{{ version }}.tar.gz
-  sha256: 8a655923c9785c02290cab387a2042f53806aa09f5ccdee0606830a7dbaa1378
+  sha256: 26bd0b61393903182e96d47a1b587a58c81cf5e7f80792a12ff4e5e2c3e1f44f
 
 build:
-  number: 1
+  number: 0
   script: NO_KERNEL_INSTALL=1 {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [not linux]
   skip: true  # [py2k]
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - ipython >=4
