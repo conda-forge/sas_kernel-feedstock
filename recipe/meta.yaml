@@ -16,7 +16,7 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
     - metakernel >=0.27.5
     - jupyter_client >=6
     - ipython >=7
@@ -24,7 +24,7 @@ requirements:
     - setuptools
     - wheel
   run:
-    - python >=3.8
+    - python >=3.9
     - saspy >=3.6
     - metakernel >=0.27.5
     - jupyter_client >=6
