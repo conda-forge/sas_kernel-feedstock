@@ -22,7 +22,7 @@ requirements:
     - ipython >=7
     - pip
     - setuptools
-    - whell
+    - wheel
   run:
     - python >=3.8
     - saspy >=3.6
