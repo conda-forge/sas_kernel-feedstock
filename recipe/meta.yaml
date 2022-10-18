@@ -16,13 +16,13 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.8
     - metakernel >=0.27.5
     - jupyter_client >=6
     - ipython >=7
     - pip
   run:
-    - python
+    - python >=3.8
     - saspy >=3.6
     - metakernel >=0.27.5
     - jupyter_client >=6
