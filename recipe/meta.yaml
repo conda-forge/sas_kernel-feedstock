@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  script: NO_KERNEL_INSTALL=1 {{ PYTHON }} setup.py install --single-version-externally-managed --record=record.txt
+  script: NO_KERNEL_INSTALL=1 {{ PYTHON }} -m pip install . --no-deps -vv
   number: 0
 
 requirements:
