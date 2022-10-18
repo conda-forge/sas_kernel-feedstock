@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: NO_KERNEL_INSTALL=1 {{ PYTHON }} setup.py install --single-version-externally-managed --record=record.txt
   number: 0
 
 requirements:
@@ -21,6 +21,8 @@ requirements:
     - jupyter_client >=6
     - ipython >=7
     - pip
+    - setuptools
+    - whell
   run:
     - python >=3.8
     - saspy >=3.6
