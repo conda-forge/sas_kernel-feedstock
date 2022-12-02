@@ -1,5 +1,5 @@
 {% set name = "sas_kernel" %}
-{% set version = "2.4.11" %}
+{% set version = "2.4.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/SAS_kernel-{{ version }}.tar.gz
-  sha256: 7bd05f0d071ab975d8cac6ee1eb1ee0d19c47d69121afddc6c0b47bd044983f6
+  sha256: 7f8f447e9b60d2501ef772bde29db6afacf496434b3336037ddb8b89d3028857
 
 build:
   noarch: python
