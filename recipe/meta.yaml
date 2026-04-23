@@ -6,17 +6,17 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/SAS_kernel-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/SAS_kernel-{{ version }}.tar.gz
   sha256: 7f8f447e9b60d2501ef772bde29db6afacf496434b3336037ddb8b89d3028857
 
 build:
   noarch: python
   script: NO_KERNEL_INSTALL=1 {{ PYTHON }} -m pip install . --no-deps -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - metakernel >=0.27.5
     - jupyter_client >=6
     - ipython >=7
@@ -24,7 +24,7 @@ requirements:
     - setuptools
     - wheel
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - saspy >=3.6
     - metakernel >=0.27.5
     - jupyter_client >=6
@@ -37,6 +37,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/sassoftware/sas_kernel
